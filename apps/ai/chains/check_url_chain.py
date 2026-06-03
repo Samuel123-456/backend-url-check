@@ -10,7 +10,7 @@ class CheckURLChain:
 
 
     @staticmethod
-    def run(url: str) -> LinkAnalysisOutput:
+    async def run(url: str) -> LinkAnalysisOutput:
 
         model = GoogleProvider.get_model()
         prompts = [
@@ -25,6 +25,7 @@ class CheckURLChain:
 
         # # Get the model's response
         model_output = model.with_structured_output(LinkAnalysisOutput)
-        response =  model_output.invoke(prompt)
+        response = await model_output.ainvoke(prompt)
 
-        return response.model_dump_json()
+        # Retornar a instância Pydantic `LinkAnalysisOutput`, não uma string JSON
+        return response
