@@ -1,0 +1,56 @@
+# ==========================================
+# Django e Python
+# ==========================================
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+db.sqlite3
+db.sqlite3-journal
+/media/
+/static/
+staticfiles/
+
+# ==========================================
+# Ambientes Virtuais (Virtual Envs)
+# ==========================================
+.venv/
+venv/
+env/
+ENV/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ==========================================
+# Variáveis de Ambiente e Segurança (CRÍTICO)
+# ==========================================
+.env
+.env.[a-zA-Z]*
+!.env.example
+secrets.json
+*.pem
+*.key
+
+# ==========================================
+# LangChain / IA / Vetores e LLMs
+# ==========================================
+# Caches de modelos e logs do LangChain
+.langchain/
+.chroma/
+/vector_stores/
+*.log
+langchain.log
+
+# ==========================================
+# IDEs e Editores de Código (Cursor / VS Code)
+# ==========================================
+.vscode/
+.cursor/
+*.code-workspace
+.idea/
+
+# ==========================================
+# Docker (Se usares no futuro)
+# ==========================================
+.dockerprod
